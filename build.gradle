@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+    }
+}
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+archivesBaseName = 'utils-1.3.5'
